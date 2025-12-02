@@ -1,6 +1,7 @@
 """
 Example Airflow DAG using KubernetesExecutor
 This DAG demonstrates basic tasks that run in separate Kubernetes pods
+Compatible with Airflow 3.0+
 """
 
 from datetime import datetime, timedelta
@@ -23,7 +24,7 @@ with DAG(
     'kubernetes_executor_example',
     default_args=default_args,
     description='A simple DAG to test KubernetesExecutor',
-    schedule_interval=None,  # Manual trigger only
+    schedule=None,  # Manual trigger only (Airflow 3.0+)
     start_date=datetime(2025, 1, 1),
     catchup=False,
     tags=['example', 'kubernetes'],
