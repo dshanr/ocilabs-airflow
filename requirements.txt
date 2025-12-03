@@ -1,1 +1,7 @@
+# OCI SDK and Airflow Provider
 oci==2.164.0
+apache-airflow-providers-oracle>=3.10.0
+
+# Add any other packages your DAGs need
+oracledb>=2.0.0
+pandas>=2.0.0
